@@ -8,7 +8,8 @@
 		"watch": "ng build --watch --configuration development",
 		"test": "ng test",
 		"serve:ssr:angular-ssr-template": "node dist/angular-ssr-template/server/server.mjs",
-		"lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
+		"lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+		"prepare": "husky install"
 	},
 	"private": true,
 	"dependencies": {
@@ -31,6 +32,8 @@
 		"@angular-devkit/build-angular": "^17.0.3",
 		"@angular/cli": "^17.0.3",
 		"@angular/compiler-cli": "^17.0.0",
+		"@commitlint/cli": "^18.4.3",
+		"@commitlint/config-conventional": "^18.4.3",
 		"@types/express": "^4.17.17",
 		"@types/jasmine": "~5.1.0",
 		"@types/node": "^18.18.0",
@@ -39,6 +42,7 @@
 		"autoprefixer": "^10.4.16",
 		"eslint": "^8.54.0",
 		"eslint-config-prettier": "^9.0.0",
+		"husky": "^8.0.3",
 		"jasmine-core": "~5.1.0",
 		"karma": "~6.4.0",
 		"karma-chrome-launcher": "~3.2.0",
