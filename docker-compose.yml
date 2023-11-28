@@ -1,0 +1,17 @@
+services:
+  angular-ssr:
+    container_name: angular-ssr
+    image: angular-ssr
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    env_file:
+      - .env
+    volumes:
+      - .:/home/node
+      - /home/node/node_modules
+    command: "npm run concurrently --kill-others \"npm run watch\" \"npm run serve:ssr:angular-ssr-template\""
+    ports:
+      - ${PORT}:3000
