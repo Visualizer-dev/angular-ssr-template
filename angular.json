@@ -20,6 +20,11 @@
             "tsConfig": "tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets"],
             "scripts": [],
+            "styles": [
+              "src/common/styles/tailwind.css",
+              "src/common/styles/fonts.css",
+              "src/common/styles/height.css"
+            ],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {

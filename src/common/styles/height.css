@@ -1,0 +1,7 @@
+html,body,app-root, router-outlet {
+  height: 100%;
+}
+
+app-root, router-outlet {
+  display: block;
+}
